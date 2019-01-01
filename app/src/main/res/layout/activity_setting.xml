@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="org.khucd.cdapp.SettingActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작 시간"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/StartTimeSpinner"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="false"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="종료 시간"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/StartTimeSpinner"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="10dp" />
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/EndTimeSpinner"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="20dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="적용하기"
+            android:id="@+id/btnOK"
+            android:onClick="onOKbtnClicked"
+            android:textSize="35px"
+            android:layout_below="@+id/EndTimeSpinner"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/timeSet"
+            android:textSize="20dp"
+            android:background="#e4fcf8"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="20dp" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="충격감지 기능 사용"
+            android:id="@+id/collisionDetectCheck"
+            android:enabled="true"
+            android:clickable="true"
+            android:textSize="40px"
+            android:layout_marginTop="27dp"
+            android:layout_below="@+id/timeSet"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="20dp" />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="위치 이동감지 기능"
+            android:id="@+id/movingCheck"
+            android:textSize="40px"
+            android:layout_marginTop="27dp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="휴대폰에 가해지는 충격을 감지하여, 휴대폰에 큰 충격이 가해질 경우 위험한 상황으로 판단합니다. 충격감지 기능을 사용하려면 체크해 주세요."
+            android:id="@+id/textView3"
+            android:textSize="20dp"
+            android:layout_below="@+id/collisionDetectCheck"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="30dp"
+            android:textIsSelectable="false" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="일정시간 이상동안 움직임이 없는 경우를 위험으로 판단합니다. 위치 이동감지 기능을 사용하려면 체크해 주세요."
+            android:id="@+id/textView4"
+            android:layout_below="@+id/movingCheck"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:textSize="20dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="40dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="귀가시간"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/btnOK"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="7dp"
+            android:textIsSelectable="false"
+            android:textSize="20dp"
+            android:layout_marginLeft="10dp" />
+    </RelativeLayout>
+</ScrollView>
+
