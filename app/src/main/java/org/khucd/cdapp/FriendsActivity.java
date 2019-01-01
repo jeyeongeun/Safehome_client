@@ -26,7 +26,7 @@ public class FriendsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_friends);
+        setContentView(R.layout.activity_friends);//
 
         phoneNumber = (EditText) findViewById(R.id.phoneNumber);
 
